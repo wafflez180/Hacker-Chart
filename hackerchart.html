@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Hacker Chart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="stylesheethackerchart.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="logo.png" id="navbarLogo"></a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Arthur De Araujo <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="charts-table">
+        <ul class="nav nav-tabs">
+            <li class="tab-button"><a data-toggle="tab" href="#all-time" class="tab-button-label">All Time</a></li>
+            <li class="tab-button"><a data-toggle="tab" href="#weekly" class="tab-button-label">Weekly</a></li>
+            <li class="tab-button active"><a data-toggle="tab" href="#friends" class="tab-button-label">Friends</a></li>
+        </ul>
+
+        <div class="tab-content">
+            <div id="all-time" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-12 chart-tools-row">
+                        <div class="tool-col-main-content">
+                            <h1 class="tool-rank-num">1</h1>
+                            <img src="no-tool-icon.png" class="tool-rank-pic">
+                            <div class="tool-rank-text">
+                                <div class="tool-name-and-count">
+                                    <h3 class="tool-name">FacebookSDK</h3>
+                                    <div class="tool-user-count">1,044</div>
+                                </div>
+                                <h4 class="tool-link">https://developers.facebook.com/docs/</h4>
+                            </div>
+                        </div>
+                        <div class="tool-days-at-rank">2d</div>
+                    </div>
+                </div>
+            </div>
+            <div id="weekly" class="tab-pane fade">
+                <div class="row">
+                    <div class="col-sm-12 chart-tools-row">
+                        <div class="tool-col-main-content">
+                            <h1 class="tool-rank-num">1</h1>
+                            <img src="no-tool-icon.png" class="tool-rank-pic">
+                            <div class="tool-rank-text">
+                                <div class="tool-name-and-count">
+                                    <h3 class="tool-name">FacebookSDKasd<br> asdasdasdas<br>d asdasd</h3>
+                                    <div class="tool-user-count">1,044</div>
+                                </div>
+                                <h4 class="tool-link">https://developers.facebook.com/docs/</h4>
+                            </div>
+                        </div>
+                        <div class="tool-weekly-user-increase-container">
+                            <img src="arrow.png" class="tool-weekly-arrow">
+                            <div class="tool-weekly-text">23</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="friends" class="tab-pane fade in active">
+                <div class="row">
+                    <div class="col-sm-12 chart-tools-row">
+                        <div class="tool-col-main-content">
+                            <h1 class="tool-rank-num">1</h1>
+                            <img src="no-tool-icon.png" class="tool-rank-pic">
+                            <div class="tool-rank-text">
+                                <div class="tool-name-and-count">
+                                    <h3 class="tool-name">FacebookSDKasdawdawdawdawdawdawdwadwadaawdwadawawdawdwada</h3>
+                                    <div class="tool-user-count">1,044</div>
+                                </div>
+                                <h4 class="tool-link">https://developers.facebook.com/docs/</h4>
+                            </div>
+                        </div>
+                        <div class="tool-friends-circles-container">
+                            <img src="exprofilepic.png" class="tool-friends-circle">
+                        </div>
+                        <div class="tool-row-seperator"></div>
+                    </div>
+                    <div class="col-sm-12 chart-tools-row">
+                        <div class="tool-col-main-content">
+                            <h1 class="tool-rank-num">1</h1>
+                            <img src="no-tool-icon.png" class="tool-rank-pic">
+                            <div class="tool-rank-text">
+                                <div class="tool-name-and-count">
+                                    <h3 class="tool-name">FacebookSDKasdawdawdawdawdawdawdwadwadaawdwadawawdawdwada</h3>
+                                    <div class="tool-user-count">1,044</div>
+                                </div>
+                                <h4 class="tool-link">https://developers.facebook.com/docs/</h4>
+                            </div>
+                        </div>
+                        <div class="tool-friends-circles-container">
+                            <img src="exprofilepic.png" class="tool-friends-circle">
+                        </div>
+                        <div class="tool-row-seperator"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="right-side-bar">
+        <div class="your-tools">
+            <h2> Your Tools </h2>
+            <div class="search-bar">
+                <input type="text" placeholder="Add New Tool" class="search-text-field">
+                <img src="search-icon.png" id="search-icon">
+            </div>
+            <div class="row your-tools-row">
+                <div class="col-sm-12 your-tools-col">
+                    <h1 class="your-tool-rank-num">1</h1>
+                    <img src="no-tool-icon.png" class="your-tool-rank-pic">
+                    <h3 class="your-tool-rank-name">FacebookSDKasd<br> asdasdasdas<br>d asdasd</h3>
+                    <div class="your-tool-user-count">1,044</div>
+                </div>
+                <div class="col-sm-12 your-tools-col">
+                    <h1 class="your-tool-rank-num">1</h1>
+                    <img src="no-tool-icon.png" class="your-tool-rank-pic">
+                    <h3 class="your-tool-rank-name">CocoaPod</h3>
+                    <div class="your-tool-user-count">1,044</div>
+                </div>
+            </div>
+        </div>
+        <div class="friends-tools">
+            <h2 class="friends-tools-container-title"> Friend's Tools </h2>
+            <div class="row friends-tools-row">
+                <div class="col-sm-12 friends-tools-col">
+                    <img src="exprofilepic.png" class="friend-profile-pic">
+                    <div class="friend-name">Declan Hopkins</div>
+                    <img src="darkarrow.png" class="friend-drop-arrow">
+                    <div class="friend-seperator"></div>
+                </div>
+                <div class="col-sm-12 friends-tools-col">
+                    <img src="exprofilepic.png" class="friend-profile-pic">
+                    <div class="friend-name">Declan Hopkins</div>
+                    <img src="darkarrow.png" class="friend-drop-arrow">
+                    <div class="friend-seperator"></div>
+                </div>
+                <div class="col-sm-12 friends-tools-col">
+                    <img src="exprofilepic.png" class="friend-profile-pic">
+                    <div class="friend-name">Declan Hopkinsawdawdwadwadwadwadaww</div>
+                    <img src="darkarrow.png" class="friend-drop-arrow">
+                    <div class="friend-seperator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
