@@ -1,5 +1,354 @@
 #navbarLogo {
-    height: 20px;
+    height: 25px;
+}
+
+.navbar-hc{
+  position: relative;
+  height: 50px;
+  background-color: white;
+
+  margin-bottom: 15px;
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .10);
+}
+
+.navbar-brand-hc{
+  position: relative;
+  cursor: pointer;
+  height: 50px;
+  width: 10%;
+  float: left;
+
+  text-align: center;
+  vertical-align: middle;
+
+  line-height: 45px;
+  background-color: transparent;
+}
+
+.navbar-separator{
+  float: right;
+  height: 100%;
+  width: 1px;
+
+  background-color: #F3F3F3;
+}
+
+.account-separator{
+  float: right;
+  height: 50px;
+  width: 1px;
+
+  background-color: #F3F3F3;
+}
+
+.nav-buttons-container{
+  display: -webkit-inline-box;
+  height: 100%;
+  line-height: 50px;
+}
+
+.nav-button{
+  margin-left: 20px;
+  color: #757575;
+  cursor: pointer;
+
+  height: 30px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 10px;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 15px;
+
+  line-height: 30px;
+  border-radius: 4px;
+}
+
+.nav-button:hover{
+  border-radius: 4px;
+  background-color: #F3F3F3;
+}
+
+.nav-button.active{
+  color: white;
+  font-weight: bold;
+  border-radius: 4px;
+  background: #4990E2; /* For browsers that do not support gradients */
+  background: -webkit-linear-gradient(#4990E2, #3880D2); /* For Safari 5.1 to 6.0 */
+  background: -o-linear-gradient(#4990E2, #3880D2); /* For Opera 11.1 to 12.0 */
+  background: -moz-linear-gradient(#4990E2, #3880D2); /* For Firefox 3.6 to 15 */
+  background: linear-gradient(#4990E2, #3880D2); /* Standard syntax */
+}
+
+@media only screen and (max-width : 800px) {
+
+  .body{
+      background-color: white !important;
+  }
+
+  .navbar-hc{
+    display: inline-table;
+    text-align: center;
+    width: 100% !important;
+    margin-bottom: 15px !important;
+  }
+
+  .navbar-brand-hc{
+    height: 65px !important;
+    width: 30% !important;
+    line-height: 65px !important;
+  }
+
+  .account-button{
+    position: absolute !important;
+    top: 10px !important;
+    right: 10px !important;
+    margin-right: 0px !important;
+  }
+
+  .account-separator{
+    background-color: transparent !important;
+  }
+
+  .navbar-separator{
+    background-color: transparent !important;
+  }
+
+  .filters-container{
+    margin-top: 5px !important;
+    margin-right: 15px !important;
+  }
+
+  .filters-container.active{
+    margin-top: 15px !important;
+  }
+
+  .charts-table{
+    position: relative !important;
+    float: none !important;
+    width: 100% !important;
+    right: 0px !important;
+    display: inline-block;
+    border: 0px !important;
+    border-radius: 0px !important;
+  }
+  .right-side-bar{
+    position: relative;
+    float: none !important;
+    width: 100% !important;
+    padding-top: 25px;
+  }
+  .your-tools{
+    border: 0px !important;
+    border-radius: 0px !important;
+  }
+
+  .friends-tools{
+    border: 0px !important;
+    border-radius: 0px !important;
+    margin-top: 7px !important;
+  }
+
+  .search-text-field{
+    height: 45px !important;
+    padding: 15px !important;
+  }
+
+  #search-icon{
+    width: 25px !important;
+    margin-left: -40px !important;
+  }
+
+  .your-tools-col{
+    padding-top: 30px !important;
+  }
+}
+
+.filters-container{
+  display: inline-flex;
+  cursor: default;
+  float: right;
+  line-height: 50px;
+  height: 50px;
+
+  margin-top: 10px;
+  margin-right: 20px;
+
+  /* So the image doesn't get selected*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.filters-container.active .filtered{
+  display: block;
+}
+
+.filters-container.active .filter-button{
+  background-color: #757575;
+  filter: brightness(100%);
+}
+
+.filters-container.active .add-language-button{
+  display: block;
+}
+
+.filters-container.active .language-filter{
+  display: flex;
+}
+
+.add-language-button{
+  cursor: pointer;
+  color: #757575;
+  height: 31px;
+  display: none;
+
+  line-height: 30px;
+  margin-right: 0px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.add-language-button:hover{
+  background-color: #F3F3F3;
+  border-radius: 5px;
+}
+
+.language-filter{
+  display: none;
+  height: 30px;
+  color: #757575;
+
+  padding: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin-right: 15px;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 15px;
+
+  border: 1px solid #757575;
+  border-radius: 5px;
+  line-height: 18px;
+
+  transition: padding-left 0.2s;
+}
+
+.language-delete-button{
+  display: block;
+  margin-top: 4px;
+  height: 12px;
+  width: 0px;
+  opacity: 0.0;
+  filter: brightness(0) invert(1);
+
+  transition: all 0.2s;
+}
+
+.language-filter:hover{
+  background-color: #FF857D;
+  color: white;
+  border: 0px;
+  padding-left: 10px;
+}
+
+.language-filter.deleted{
+  display: none !important;
+}
+
+.language-filter:active{
+  background-color: red;
+}
+
+.language-filter:hover .language-delete-button{
+  width: 12px;
+
+  opacity: 1.0;
+  margin-left: 5px;
+  margin-right: 2px;
+
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.filter-button{
+  cursor: pointer;
+  height: 35px;
+  width: 35px;
+
+  margin-top: -3px;
+
+  line-height: 30px;
+  text-align: center;
+  vertical-align: center;
+
+  border-radius: 5px;
+  border: 2px solid #757575;
+  filter: brightness(115%);
+}
+
+.filter-button:hover{
+  filter: brightness(100%);
+}
+
+.filtered{
+  display: none;
+  height: 21px;
+  margin-top: -75%;
+  margin-left: 20%;
+}
+
+.unfiltered{
+  height: 21px;
+}
+
+.account-button{
+  cursor: pointer;
+  float: right;
+  line-height:50px;
+  width: 50px;
+  text-align: center;
+  margin-right: 30px;
+}
+
+.account-button img{
+  height: 20px;
+  /* So the image doesn't get selected*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.account-button:hover img{
+  filter: brightness(75%);
+}
+
+
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:active{
+  background-color: none !important;
+  background-image: none !important;
+  background-repeat: none !important;
+  outline: 0 none;
+  text-decoration: none;
+
+  background-color: #F3F3F3;
+  color: black;
 }
 
 .tab-button-label {
@@ -11,65 +360,43 @@
     border-radius: 2px;
     width: 130px;
     text-align: center;
-    font-family: sans-serif;
+    font-family: 'Open Sans';
     font-weight: bold;
 }
 
 .navbar {
     border-radius: 0px;
-    font-family: sans-serif;
+    font-family: 'Open Sans';
     font-weight: 500;
 }
 
 .container-fluid{
-  background-color: #212121;
+  background-color: #FFFFFF;
 }
 
 p {
-    font-family: 'Lato', sans-serif;
+    font-family: 'Open Sans', sans-serif;
 }
 
 body{
-    font-family: 'Lato';
+    font-family: 'Open Sans';
     background-color: #F3F3F3;
 }
 
-h1{
-  color: #757575;
-  font-size: 36px;
-  font-weight: bold;
-}
-
-h2{
-  margin-top: -2.5px;
-  margin-bottom: 17.5px;
-  color: #757575;
-  font-family: 'Lato';
-  font-weight: 600;
-  font-size: 18px;
-}
-
-h3{
-  margin-top: 0px;
-  font-family: 'Lato';
-  font-weight: 500;
-  color: #3598DB;
-  font-size: 30px;
-}
-
-h4{
-  margin-top: 0px;
-  font-family: 'Lato';
-  font-weight: normal;;
-  color: #757575;
-  font-size: 20px;
-}
-
 .charts-table{
-    float: left;
-    padding-left: 20px;
+    position: absolute;
     right: 350px;
-    width: calc(100% - 315px - 25px);
+
+    /* 12% is the width of the nav bar HackerChart logo*/
+    width: calc((100% - 10%) - 350px);
+    height: 100%;
+
+    margin: auto;
+
+    background-color: white;
+    box-shadow: 0px 0px 2px rgba(0, 0, 0, .1);
+    border: 1px solid #D5D5D5;
+    border-radius: 4px;
 }
 
 .active {
@@ -95,34 +422,38 @@ h4{
   border-radius: 2px;
 }
 
-.col-sm-12{
-  height: 115px;
-  align-items: center;
-}
-
 /* All-Time Chart Tools */
 
 .chart-tools-row{
   display: flex;
   /*justify-content: center;  align horizontal */
   width: 100%;
-  padding: 5px;
   height: auto;
+
+  padding: 5px;
+}
+
+.tool-row{
+  align-items: center;
+  display: flex;
+
+  padding-top: 10px;
 }
 
 .tool-col-main-content{
-  padding-left: 15px;
   position: relative;
   display: flex;
+
+  padding-bottom: 10px;
+
   align-items: center;
   width: 85%;
 }
 
 .tool-row-seperator{
   position: absolute;
-  background-color: #BDBDBD;
-  width: calc(100% - 10px);
-  margin-left: 15px;
+  background-color: #F3F3F3;
+  width: 117.7%;
   height: 1px;
   bottom: 0px;
   left: 0px;
@@ -130,33 +461,38 @@ h4{
 
 .tool-rank-num{
   position: relative;
+  cursor:default;
   display: inline-block;
-  margin: auto;
-  padding: 5px;
+  color: #757575;
+
+  margin: 15px;
   margin-left: 20px;
-  margin-right: 20px;
-  font-weight: 400;
+  padding: 5px;
+
+  font-weight: 600;
+  font-size: 24px;
 }
 
-.tool-rank-pic{
+.tool-icon{
   position: relative;
-  width: 45px;
-  height: 45px;
   display: inline-block;
+  cursor:pointer;
+
+  width: 40px;
+  height: 40px;
+
+  margin-right: 15px;
+
+  border-radius: 2px;
 }
 
 .tool-rank-text{
-  padding: 15px;
-  padding-left: 0px;
-  padding-right: 0px;
-  margin-top: 2px;
-  margin-left: 20px;
-
+  position: relative;
   display: block;
+
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
-  position: relative;
-  font-size: 30px;
+
   max-width: 70%;
   text-align: left;
   word-wrap: break-word;
@@ -164,49 +500,82 @@ h4{
 
 .tool-name-and-count{
   display: flex;
-  /*justify-content: center;  align horizontal */
   align-items: center;
 }
 
 .tool-name{
+  cursor:pointer;
+  color: #3598DB;
   left: 0px;
+
+  margin: 0px;
+
+  font-size: 24px;
+  font-weight: 600;
+
   word-wrap: break-word;
   overflow: hidden;
-  font-size: 24px;
 }
 
-.tool-link{
+.tool-languages-container{
   position: relative;
-  margin: auto;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  font-size: 14px;
+  display: inline-flex;
+
+  padding-top: 5px;
+}
+
+.tool-language{
+  color: #BDBDBD;
+  cursor:default;
+
+  border-color: #BDBDBD;
+  border-width: 1.0px;
+  border-radius: 4px;
+  border-style: solid;
+
+  font-family: 'Open Sans';
+  font-size: 12px;
+  font-weight: 600;
+
+  padding-left: 5px;
+  padding-right: 5px;
+
+  text-align: center;
+  margin: 2.5px;
 }
 
 .tool-user-count{
   position: relative;
+  cursor:default;
   float: right;
+  background-color: #F3F3F3;
+  color: #BDBDBD;
+
   margin-left: 10px;
-  margin-bottom: 10px;
-  padding: 3px;
+  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
-  background-color: #F3F3F3;
   border-radius: 37px;
+
   text-align: center;
-  font-size: 12px;
-  font-weight: bold;
-  color: #BDBDBD;
+  font-family: 'Open Sans';
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .tool-days-at-rank{
   color: #BDBDBD;
-  font-size: 18px;
+  cursor:default;
+
+  padding: 20px;
   width: 15%;
-  text-align: right;
+
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans';
+
+  text-align: center;
   align-self: baseline;
-  padding: 3.5%;
 }
 
 .tool-weekly-user-increase-container{
@@ -218,55 +587,123 @@ h4{
 
 .tool-weekly-arrow{
   position: relative;
-  height: 15px;
+  height: 10px;
+  width: 20px;
 }
 
 .tool-weekly-text{
   position: relative;
-  width: 100%;
-  text-align: center;
-  font-size: 18px;
+  cursor:default;
   color: #BDBDBD;
+  width: 100%;
+
+  font-size: 18px;
+  font-weight: 400;
+  font-family: 'Open Sans';
+
+  text-align: center;
 }
 
 .tool-friends-circles-container{
+  cursor:default;
   width: 15%;
-  padding: 30px;
-  text-align: right;
-  align-self: baseline;
+  height: 100%;
+
+  padding: 10px;
+  padding-bottom: 20px;
+  padding-right: 30px;
+
+  text-align: center;
+  margin: auto;
 }
 
 .tool-friends-circle{
-  height: 40px;
   color: #BDBDBD;
+  height: 40px;
+  margin-right: -15px;
+
   border-radius: 50px;
   border: 1px solid white;
 }
 
+.tool-friends-circle-extra{
+  display: -webkit-inline-box;
+  position: relative;
+  background-color: #F3F3F3;
+  color: #BDBDBD;
+
+  top: 2px;
+  width: 40px;
+
+  padding: 5px;
+  padding-top: 11px;
+  padding-bottom: 13px;
+  margin-right: -15px;
+
+  border-radius: 50px;
+  border: 1px solid white;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 14px;
+
+  align-self: center;
+  line-height: 13px;
+}
+
 .right-side-bar{
   float: right;
-  margin-right: 20px;
+
+  margin-right: 30px;
   padding-bottom: 0px;
+
   width: 300px;
+}
+
+.right-side-bar-title{
+  cursor:default;
+  color: #757575;
+  display: inline-flex;
+
+  font-size: 18px;
+  font-family: 'Open Sans';
+  font-weight: 600;
+}
+
+.subscribe-button{
+  color: #3598DB;
+  float: right;
+  cursor:pointer;
+
+  font-family: 'Open Sans';
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.subscribe-button:hover{
+  text-decoration: underline;
 }
 
 /* Your Tools */
 
 .your-tools{
-  padding: 15px;
-  padding-bottom: 0px;
   background-color: white;
-  border-radius: 2px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, .25);
-  border-top: 2px solid black;
-}
 
-.your-tools-row{
-  padding-top:10px;
-  padding-bottom:15px;
+  padding: 15px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+
+  border-radius: 4px;
+  border: 1px solid #D5D5D5;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .10);
 }
 
 .your-tools-col{
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+
+.your-tools-row{
   display: flex;
   /*justify-content: center;  align horizontal */
   align-items: center; /* align vertical */
@@ -278,128 +715,291 @@ h4{
   height: auto;
 }
 
+.your-tools-row.deleted{
+
+}
+
+.your-tools-row.deleted .delete-tool-button{
+  display: none;
+}
+
+@keyframes animateOut {
+    from {opacity: 1.0;}
+    to {opacity: 0.0;}
+}
+
+.delete-tool-button{
+  background-color: transparent;
+  height: 20px;
+  width: 20px;
+  opacity: 0;
+
+  padding-right: 5px;
+  padding-left: 5px;
+
+  border-radius: 50%;
+  justify-content: center; /* align horizontal */
+  align-items: center; /* align vertical */
+
+  cursor:pointer;
+
+  /* So the image doesn't get selected*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.delete-tool-icon{
+  height: 9px;
+  width: 9px;
+  line-height: 20px;
+  margin-bottom: 2px;
+}
+
+.delete-tool-button:hover{
+  background-color: #FF857D;
+}
+
+.delete-tool-button:active {
+  background-color: #F45348;
+}
+
+.delete-tool-button:hover .delete-tool-icon{
+  filter: brightness(0) invert(1);
+}
+
+.your-tools-row:hover .delete-tool-button{
+  -webkit-animation: fadein 0.2s; /* Safari, Chrome and Opera > 12.1 */
+     -moz-animation: fadein 0.2s; /* Firefox < 16 */
+      -ms-animation: fadein 0.2s; /* Internet Explorer */
+       -o-animation: fadein 0.2s; /* Opera < 12.1 */
+          animation: fadein 0.2s;
+          opacity: 1.0;
+}
+
 .your-tool-rank-num{
   position: relative;
-  font-size: 21px;
+  color: #757575;
+  cursor:default;
+
   margin: auto;
   margin-left: 1.5%;
   margin-right: 2.5%;
-  font-weight: 400;
+
+  font-family: 'Open Sans';
+  font-size: 21px;
+  font-weight: 600;
 }
 
-.your-tool-rank-pic{
+.your-tool-icon{
   position: relative;
   width: 25px;
   margin: auto;
   margin-left: 2.5%;
   margin-right: 2.5%;
+  border-radius: 2px;
 }
 
 .your-tool-rank-name{
+  position: relative;
   display: block;
+  color: #757575;
+  max-width: 50%;
+  cursor:default;
+
   justify-content: center; /* align horizontal */
   align-items: center; /* align vertical */
-  position: relative;
-  color: #757575;
-  font-size: 17px;
-  max-width: 50%;
-  text-align: left;
+
   margin: auto;
   margin-top: 12.5px;
   margin-bottom: 12.5px;
   margin-left: 15px;
   margin-right: 15px;
   margin: 5px;
+
+  font-family: 'Open Sans';
+  font-size: 17px;
+  font-weight: 400;
+
+  text-align: left;
   word-wrap: break-word;
 }
 
 .your-tool-user-count{
   position: relative;
-  padding: 2.5px;
+  background-color: #F3F3F3;
+  color: #BDBDBD;
+  cursor:default;
+
+  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
+
   margin: 5px;
-  background-color: #F3F3F3;
   border-radius: 37px;
   font-size: 12px;
-  font-weight: bold;
-  color: #BDBDBD;
+  font-weight: 600;
 }
 
 .search-bar{
-  padding-left: 7.5px;
   height: 40px;
+
+  padding-left: 7.5px;
+  padding-top: 15px;
 }
 
 .search-text-field{
+  color: #757575;
+  height: 30px;
+  width: 96%;
+
   padding: 10px;
-  padding-bottom: 5px;
-  padding-top: 5px;
   padding-right: 50px;
-  border-radius: 2px;
-  border: 1px solid #BDBDBD;
-  height: 40px;
+
+  border-radius: 5px;
+  border: 1px solid #E8E8E8;
+
+  font-family: 'Open Sans';
   font-size: 15px;
+  font-weight: 400;
   line-height: normal;
-  width: 250px;
 }
 
 #search-icon{
-  margin-left: -35.0px;
-  margin-top: -5px;
   width: 20px;
+  margin-left: -30.0px;
+  margin-top: -5px;
+  cursor:pointer;
 }
 
 ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
-    color: rgba(117,117,117,0.25);
+    color: #D5D5D5;
     line-height: normal;
 }
 :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
-  color: rgba(117,117,117,0.25);
+  color: #D5D5D5;
    opacity:  1;
    line-height: normal;
 }
 ::-moz-placeholder { /* Mozilla Firefox 19+ */
-  color: rgba(117,117,117,0.25);
+  color: #D5D5D5;
    opacity:  1;
    line-height: normal;
 }
 :-ms-input-placeholder { /* Internet Explorer 10-11 */
-  color: rgba(117,117,117,0.25);
+  color: #D5D5D5;
   line-height: normal;
 }
 
 /* Friend's Tools */
 
 .friends-tools{
-  background-color: white;
-  border-radius: 2px;
-  border-top: 2px solid black;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, .25);
-  padding: 15px;
-  padding-bottom: 0px;
+  background-color: #FFFFFF;
+
   margin-top: 25px;
+  padding: 15px;
+  padding-top: 10px;
+  padding-bottom: 0px;
+
+  border-radius: 4px;
+  border: 1px solid #D5D5D5;
+
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, .10);
 }
 
-.friends-tools-container-title{
-  margin-top: 0px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
+#friend-count{
+  color: #BDBDBD;
+  cursor:default;
 
-.friends-tools-row{
-  padding-top: 0px;
-  padding-top: 5px;
+  padding: 2px;
+  padding-left: 7px;
+
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 600;
 }
 
 .friends-tools-col{
-  display: flex;
-  align-items: center; /* align vertical */
+  padding-top: 10px;
+
+  /* So the image doesn't get selected*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+     -moz-user-select: none; /* Firefox */
+      -ms-user-select: none; /* Internet Explorer/Edge */
+          user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+.friends-tools-row{
+  position: relative;
   width: 100%;
-  height: 65px;
+  height: auto;
+  align-items: center; /* align vertical */
+}
+
+.friends-row-user-cell{
+  position: relative;
+  display: flex;
+  cursor:pointer;
+
+  width: 100%;
+  height: auto;
+
+  padding: 20px;
   padding-top: 10px;
   padding-bottom: 10px;
-  height: auto;
+
+  align-items: center; /* align vertical */
+}
+
+.friends-tools-row:hover {
+  background-color: #F3F3F3;
+}
+
+.friends-tools-row:active .friend-drop-arrow{
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.friends-tools-row.active{
+  background-color: #3598DB;
+}
+
+.friends-tools-row.active .friend-name{
+  color: white;
+}
+
+.friends-tools-row.active .friend-drop-arrow{
+  filter: brightness(0) invert(1);
+  -ms-transform: rotate(180deg); /* IE 9 */
+  -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
+  transform: rotate(180deg);
+}
+
+.friends-tools-row.active .friend-tools-col-expanded{
+  display: block;
+}
+
+.friend-tools-col-expanded{
+  display: none;
+  position: relative;
+  background-color: white;
+
+  width: 100%;
+  margin: 0px;
+
+  padding: 0px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+
+  box-shadow: inset 0px 0px 2px rgba(0, 0, 0, .15);
 }
 
 .friend-profile-pic{
@@ -418,17 +1018,45 @@ h4{
 
 .friend-drop-arrow{
   position: absolute;
-  float: right;
-  right: 20px;
-  opacity: 0.25;
+  right: 25px;
+  width: 15px;
 }
 
 .friend-seperator{
   position: absolute;
+  background-color: #e8e8e8;
+  height: 1.0px;
+  width: 100%;
+
   left: 0px;
   top: 0px;
-  color: #BDBDBD;
-  background-color: #BDBDBD;
-  height: 1px;
-  width: 100%;
+}
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
