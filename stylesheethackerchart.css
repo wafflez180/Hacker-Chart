@@ -82,6 +82,7 @@
   background: linear-gradient(#4990E2, #3880D2); /* Standard syntax */
 }
 
+
 @media only screen and (max-width : 800px) {
 
   .body{
@@ -97,15 +98,8 @@
 
   .navbar-brand-hc{
     height: 65px !important;
-    width: 30% !important;
+    width: 100px !important;
     line-height: 65px !important;
-  }
-
-  .account-button{
-    position: absolute !important;
-    top: 10px !important;
-    right: 10px !important;
-    margin-right: 0px !important;
   }
 
   .account-separator{
@@ -116,12 +110,37 @@
     background-color: transparent !important;
   }
 
-  .filters-container{
+  .account-button{
     margin-top: 5px !important;
+  }
+
+  @media only screen and (max-width : 705px) {
+    .account-button{
+      position: absolute !important;
+      top: 10px !important;
+      right: 10px !important;
+      margin-right: 0px !important;
+    }
+    .navbar-brand-hc{
+      margin-right: 100%;
+    }
+    .filters-container{
+      margin-top: 5px !important;
+      margin-right: 15px !important;
+    }
+  }
+
+  .nav-buttons-container{
+    margin-top: 7px;
+  }
+
+  .filters-container{
+    margin-top: 17px !important;
     margin-right: 15px !important;
   }
 
   .filters-container.active{
+    position: relative !important;
     margin-top: 15px !important;
   }
 
@@ -134,11 +153,16 @@
     border: 0px !important;
     border-radius: 0px !important;
   }
+
+  .tool-name{
+    font-size: 20px !important;
+  }
+
   .right-side-bar{
     position: relative;
     float: none !important;
     width: 100% !important;
-    padding-top: 25px;
+    padding-top: 20px;
   }
   .your-tools{
     border: 0px !important;
@@ -678,6 +702,7 @@ body{
   font-family: 'Open Sans';
   font-weight: 600;
   font-size: 14px;
+  margin-top: 2px;
 }
 
 .subscribe-button:hover{
