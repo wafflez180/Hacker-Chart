@@ -111,13 +111,13 @@
   }
 
   .account-button{
-    margin-top: 5px !important;
+    margin-top: 7px !important;
   }
 
   @media only screen and (max-width : 705px) {
     .account-button{
       position: absolute !important;
-      top: 10px !important;
+      top: 5px !important;
       right: 10px !important;
       margin-right: 0px !important;
     }
@@ -125,8 +125,21 @@
       margin-right: 100%;
     }
     .filters-container{
+      position: absolute;
+      top: 5px;
+      right: 50px;
       margin-top: 5px !important;
       margin-right: 15px !important;
+    }
+    .filters-container{
+      position: absolute;
+      top: 5px;
+      right: 50px;
+      margin-top: 5px !important;
+      margin-right: 15px !important;
+    }
+    .nav-buttons-container{
+      padding-bottom: 15px;
     }
   }
 
@@ -135,13 +148,14 @@
   }
 
   .filters-container{
-    margin-top: 17px !important;
+    margin-top: 18px !important;
     margin-right: 15px !important;
   }
 
   .filters-container.active{
     position: relative !important;
-    margin-top: 15px !important;
+    margin-top: 0px !important;
+    right: 5px !important;
   }
 
   .charts-table{
