@@ -1,5 +1,7 @@
 #navbarLogo {
     height: 25px;
+    image-rendering: crisp-edges;
+    -webkit-optimize-contrast
 }
 
 .navbar-hc{
@@ -29,6 +31,16 @@
 .navbar-separator{
   float: right;
   height: 100%;
+  width: 1px;
+
+  background-color: #F3F3F3;
+}
+
+.filter-separator{
+  display: block;
+  float: left;
+  height: 50px;
+  margin-top: -10px;
   width: 1px;
 
   background-color: #F3F3F3;
@@ -66,7 +78,7 @@
 
   font-family: 'Open Sans';
   font-weight: 600;
-  font-size: 15px;
+  font-size: 14px;
 
   line-height: 30px;
   border-radius: 4px;
@@ -111,6 +123,10 @@
   }
 
   .account-separator{
+    background-color: transparent !important;
+  }
+
+  .filter-separator{
     background-color: transparent !important;
   }
 
@@ -163,7 +179,11 @@
   .filters-container.active{
     position: relative !important;
     margin-top: 0px !important;
-    right: 5px !important;
+    right: 10px !important;
+  }
+
+  .filters-container.active .filter-button{
+    border-radius: 5px;
   }
 
   .charts-table{
@@ -259,7 +279,7 @@
   display: none;
 
   line-height: 30px;
-  margin-right: 0px;
+  margin-right: -5px;
   padding-left: 10px;
   padding-right: 10px;
 
@@ -281,7 +301,7 @@
   padding: 5px;
   padding-left: 5px;
   padding-right: 5px;
-  margin-right: 15px;
+  margin-right: 10px;
 
   font-family: 'Open Sans';
   font-weight: 600;
@@ -333,18 +353,17 @@
 }
 
 .filter-button{
+  display: block;
   cursor: pointer;
-  height: 35px;
-  width: 35px;
+  height: 50px;
+  width: 50px;
 
-  margin-top: -3px;
+  margin-top: -10px;
+  margin-right: -20px;
 
   line-height: 30px;
   text-align: center;
-  vertical-align: center;
 
-  border-radius: 5px;
-  border: 2px solid #757575;
   filter: brightness(115%);
 }
 
@@ -355,12 +374,13 @@
 .filtered{
   display: none;
   height: 21px;
-  margin-top: -75%;
-  margin-left: 20%;
+  margin: auto;
+  margin-top: -21px;
 }
 
 .unfiltered{
   height: 21px;
+  margin-top: 15px;
 }
 
 .account-button{
@@ -400,29 +420,6 @@
   color: black;
 }
 
-.tab-button-label {
-    color: #757575;
-    background-color: #D5D5D5;
-    height: 39px;
-    margin-right: 0px;
-    border-right: 2px;
-    border-radius: 2px;
-    width: 130px;
-    text-align: center;
-    font-family: 'Open Sans';
-    font-weight: bold;
-}
-
-.navbar {
-    border-radius: 0px;
-    font-family: 'Open Sans';
-    font-weight: 500;
-}
-
-.container-fluid{
-  background-color: #FFFFFF;
-}
-
 p {
     font-family: 'Open Sans', sans-serif;
 }
@@ -431,6 +428,8 @@ body{
     font-family: 'Open Sans';
     background-color: #F3F3F3;
 }
+
+/* All-Time Chart Tools */
 
 .charts-table{
     position: absolute;
@@ -448,31 +447,6 @@ body{
     border-radius: 4px;
 }
 
-.active {
-    border-top: 3px rgba(0, 0, 0, 0.5);
-    border-radius: 0px;
-}
-
-.tab-button {
-    border-radius: 2px;
-    margin-right: 15px;
-    height: 39px;
-}
-
-.tab-content{
-  border-radius: 0px 0px 3px 3px;
-  box-shadow: 0px 1px 5px rgba(0, 0, 0, .25);
-}
-
-.tab-pane{
-  margin-top: 0px;
-  padding-right: 20px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-/* All-Time Chart Tools */
-
 .chart-tools-row{
   display: flex;
   /*justify-content: center;  align horizontal */
@@ -483,26 +457,30 @@ body{
 }
 
 .tool-row{
-  align-items: center;
   display: flex;
+  cursor: pointer;
 
-  padding-top: 10px;
+  padding-top: 8px;
+}
+
+.tool-row:hover{
+  background-color: #FAFAFA;
 }
 
 .tool-col-main-content{
   position: relative;
   display: flex;
 
-  padding-bottom: 10px;
+  padding-bottom: 8px;
 
   align-items: center;
-  width: 85%;
+  width: 90%;
 }
 
 .tool-row-seperator{
   position: absolute;
   background-color: #F3F3F3;
-  width: 117.7%;
+  width: calc(110% + 7px);
   height: 1px;
   bottom: 0px;
   left: 0px;
@@ -510,16 +488,16 @@ body{
 
 .tool-rank-num{
   position: relative;
-  cursor:default;
   display: inline-block;
   color: #757575;
 
-  margin: 15px;
-  margin-left: 20px;
+  margin: 10px;
+  margin-left: 15px;
+  margin-right: 5px;
   padding: 5px;
 
   font-weight: 600;
-  font-size: 24px;
+  font-size: 16px;
 }
 
 .tool-icon{
@@ -527,10 +505,10 @@ body{
   display: inline-block;
   cursor:pointer;
 
-  width: 40px;
-  height: 40px;
+  width: 25px;
+  height: 25px;
 
-  margin-right: 15px;
+  margin-right: 10px;
 
   border-radius: 2px;
 }
@@ -558,8 +536,9 @@ body{
   left: 0px;
 
   margin: 0px;
+  margin-left: 3px;
 
-  font-size: 24px;
+  font-size: 16px;
   font-weight: 600;
 
   word-wrap: break-word;
@@ -569,22 +548,20 @@ body{
 .tool-languages-container{
   position: relative;
   display: inline-flex;
-
-  padding-top: 5px;
 }
 
 .tool-language{
   color: #BDBDBD;
-  cursor:default;
 
-  border-color: #BDBDBD;
+  border-color: #D5D5D5;
   border-width: 1.0px;
-  border-radius: 4px;
+  border-radius: 3px;
   border-style: solid;
 
   font-family: 'Open Sans';
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
+  line-height: 12px;
 
   padding-left: 5px;
   padding-right: 5px;
@@ -595,31 +572,29 @@ body{
 
 .tool-user-count{
   position: relative;
-  cursor:default;
   float: right;
   background-color: #F3F3F3;
   color: #BDBDBD;
 
   margin-left: 10px;
-  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
+  line-height: 18px;
   border-radius: 37px;
 
   text-align: center;
   font-family: 'Open Sans';
-  font-size: 13px;
+  font-size: 10px;
   font-weight: 600;
 }
 
 .tool-days-at-rank{
   color: #BDBDBD;
-  cursor:default;
 
-  padding: 20px;
-  width: 15%;
+  padding: 10px;
+  width: 10%;
 
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   font-family: 'Open Sans';
 
@@ -629,24 +604,24 @@ body{
 
 .tool-weekly-user-increase-container{
   color: #BDBDBD;
-  font-size: 18px;
-  width: 15%;
+  font-size: 14px;
+  width: 10%;
   text-align: center;
+  padding-top: 5px;
 }
 
 .tool-weekly-arrow{
   position: relative;
-  height: 10px;
-  width: 20px;
+  height: 6px;
+  width: 13px;
 }
 
 .tool-weekly-text{
   position: relative;
-  cursor:default;
   color: #BDBDBD;
   width: 100%;
 
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
   font-family: 'Open Sans';
 
@@ -654,13 +629,10 @@ body{
 }
 
 .tool-friends-circles-container{
-  cursor:default;
-  width: 15%;
+  width: 10%;
   height: 100%;
 
-  padding: 10px;
-  padding-bottom: 20px;
-  padding-right: 30px;
+  padding-bottom: 10px;
 
   text-align: center;
   margin: auto;
@@ -668,8 +640,8 @@ body{
 
 .tool-friends-circle{
   color: #BDBDBD;
-  height: 40px;
-  margin-right: -15px;
+  height: 25px;
+  margin-right: -12px;
 
   border-radius: 50px;
   border: 1px solid white;
@@ -714,7 +686,7 @@ body{
   color: #757575;
   display: inline-flex;
 
-  font-size: 18px;
+  font-size: 16px;
   font-family: 'Open Sans';
   font-weight: 600;
 }
@@ -749,8 +721,8 @@ body{
 }
 
 .your-tools-col{
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 }
 
 .your-tools-row{
@@ -780,12 +752,12 @@ body{
 
 .delete-tool-button{
   background-color: transparent;
-  height: 20px;
-  width: 20px;
+  height: 18px;
+  width: 18px;
   opacity: 0;
 
-  padding-right: 5px;
-  padding-left: 5px;
+  padding-right: 6px;
+  padding-left: 4px;
 
   border-radius: 50%;
   justify-content: center; /* align horizontal */
@@ -807,7 +779,7 @@ body{
   height: 9px;
   width: 9px;
   line-height: 20px;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .delete-tool-button:hover{
@@ -841,7 +813,7 @@ body{
   margin-right: 2.5%;
 
   font-family: 'Open Sans';
-  font-size: 21px;
+  font-size: 16px;
   font-weight: 600;
 }
 
@@ -872,7 +844,7 @@ body{
   margin: 5px;
 
   font-family: 'Open Sans';
-  font-size: 17px;
+  font-size: 16px;
   font-weight: 400;
 
   text-align: left;
@@ -891,7 +863,7 @@ body{
 
   margin: 5px;
   border-radius: 37px;
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 600;
 }
 
@@ -899,7 +871,7 @@ body{
   height: 40px;
 
   padding-left: 7.5px;
-  padding-top: 15px;
+  padding-top: 10px;
 }
 
 .search-text-field{
@@ -914,7 +886,7 @@ body{
   border: 1px solid #E8E8E8;
 
   font-family: 'Open Sans';
-  font-size: 15px;
+  font-size: 14px;
   font-weight: 400;
   line-height: normal;
 }
@@ -922,7 +894,7 @@ body{
 #search-icon{
   width: 20px;
   margin-left: -30.0px;
-  margin-top: -5px;
+  margin-top: -3px;
   cursor:pointer;
 }
 
@@ -969,12 +941,12 @@ body{
   padding-left: 7px;
 
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .friends-tools-col{
-  padding-top: 10px;
+  padding-top: 8px;
 
   /* So the image doesn't get selected*/
   -webkit-touch-callout: none; /* iOS Safari */
@@ -1002,8 +974,8 @@ body{
   height: auto;
 
   padding: 20px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
 
   align-items: center; /* align vertical */
 }
@@ -1024,6 +996,7 @@ body{
 
 .friends-tools-row.active .friend-name{
   color: white;
+  font-weight: 600;
 }
 
 .friends-tools-row.active .friend-drop-arrow{
@@ -1053,14 +1026,14 @@ body{
 }
 
 .friend-profile-pic{
-  border-radius: 40px;
-  width: 40px;
+  border-radius: 50%;
+  width: 30px;
   border: 1px solid white;
 }
 
 .friend-name{
   color: #757575;
-  font-size: 15px;
+  font-size: 14px;
   padding-left: 15px;
   width: 70%;
   word-wrap: break-word;
