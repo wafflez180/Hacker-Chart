@@ -264,7 +264,10 @@
 
 .filters-container.active .filter-button{
   background-color: #757575;
-  filter: brightness(100%);
+}
+
+.filters-container.active .filter-button img{
+  filter: brightness(0) invert(1);
 }
 
 .filters-container.active .add-language-button{
@@ -319,19 +322,24 @@
 
 .language-delete-button{
   display: block;
-  margin-top: 4px;
+  margin-top: 2px;
   height: 12px;
   width: 0px;
   opacity: 0.0;
-  filter: brightness(0) invert(1);
 
   transition: all 0.2s;
 }
-
+/*
 .language-filter:hover{
   background-color: #FF857D;
   color: white;
   border: 0px;
+  padding-left: 10px;
+}*/
+
+.language-filter:hover{
+  border-color: #FF857D;
+  color: #FF857D;
   padding-left: 10px;
 }
 
@@ -344,11 +352,12 @@
 }
 
 .language-filter:hover .language-delete-button{
-  width: 12px;
+  width: 14px;
+  height: 14px;
 
   opacity: 1.0;
-  margin-left: 5px;
-  margin-right: 2px;
+  margin-left: 4px;
+  margin-right: 1px;
 
   -ms-transform: rotate(180deg); /* IE 9 */
   -webkit-transform: rotate(180deg); /* Chrome, Safari, Opera */
@@ -366,19 +375,10 @@
 
   line-height: 30px;
   text-align: center;
-
-  filter: brightness(115%);
 }
 
 .filter-button:hover{
-  filter: brightness(100%);
-}
-
-.filtered{
-  display: none;
-  height: 21px;
-  margin: auto;
-  margin-top: -21px;
+  background-color: #F3F3F3;
 }
 
 .unfiltered{
@@ -407,8 +407,8 @@
                                 supported by Chrome and Opera */
 }
 
-.account-button:hover img{
-  filter: brightness(75%);
+.account-button:hover{
+  background-color: #F3F3F3;
 }
 
 .tool-friends-circles-dropdown{
@@ -732,7 +732,7 @@ body{
 }
 
 .your-tools-col{
-  padding-top: 8px;
+  padding-top: 5px;
   padding-bottom: 8px;
 }
 
@@ -742,8 +742,8 @@ body{
   align-items: center; /* align vertical */
   width: 100%;
   padding: 5px;
-  padding-left: 35px;
-  padding-right: 35px;
+  padding-left: 25px;
+  padding-right: 25px;
   text-align: center;
   height: auto;
 }
