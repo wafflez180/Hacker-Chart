@@ -813,13 +813,13 @@ body{
   margin-right: 2.5%;
 
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
 }
 
 .your-tool-icon{
   position: relative;
-  width: 25px;
+  width: 20px;
   margin: auto;
   margin-left: 2.5%;
   margin-right: 2.5%;
@@ -844,7 +844,7 @@ body{
   margin: 5px;
 
   font-family: 'Open Sans';
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 400;
 
   text-align: left;
