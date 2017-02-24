@@ -35,6 +35,52 @@
                 $(this.parent).toggleClass("open");
             })
 
+            $(".search-bar").keypress(function() {
+                $(this).addClass("open");
+
+                var pos = $(this).position();
+                var height = 10 + $(this).height();
+                $(".dropdown-tools-menu").css({
+                    top: (pos.top + height) + "px",
+                }).show();
+                //Bring results from API
+            })
+
+            $(".search-bar").hover(function() {
+                $(this).removeClass("open");
+            })
+
+            $(".tool-list-item.add-tool").click(function() {
+                $("html").find(".add-new-tool-popup").addClass("open");
+            })
+
+            $(".close-button").click(function() {
+                $("html").find(".add-new-tool-popup").removeClass("open");
+            })
+
+            $(".add-new-tool-button").click(function() {
+                if ($(this).hasClass("enabled")) {
+                    $("html").find(".add-new-tool-popup").removeClass("open");
+                    //TODO SEND TO THE API and ADD LOADING SPINNER
+                }
+            })
+
+            $(".checkbox").click(function() {
+                $(this).toggleClass("enabled");
+
+                var aCheckboxIsEnabled = false;
+                $('.checkbox').each(function(i, obj) {
+                    if ($(this).hasClass("enabled")) {
+                        aCheckboxIsEnabled = true;
+                    }
+                });
+                if (aCheckboxIsEnabled) {
+                    $(".add-new-tool-button").addClass("enabled");
+                } else {
+                    $(".add-new-tool-button").removeClass("enabled");
+                }
+            });
+
             $('.delete-tool-button').click(function() {
                 var toolRow = $(this).parent();
                 /*
@@ -171,12 +217,39 @@
         </div>
     </div>
     <div class="right-side-bar">
+        <div class="add-new-tool-popup">
+            <div class="close-button"><img src="remove_tool.png"></div>
+            <div class="title">What do you use FacebookSDK for?<br>(check all that apply)</div>
+            <div class="lang-checkboxes">
+                <div class="checkbox">
+                    <img src="checkmark.png">
+                    <div class="checkbox-title">iOS</div>
+                </div>
+                <div class="checkbox">
+                    <img src="checkmark.png">
+                    <div class="checkbox-title">Java</div>
+                </div>
+            </div>
+            <div class="add-new-tool-button">Add</div>
+        </div>
         <div class="your-tools">
             <div class="right-side-bar-title"> Your Tools </div>
             <div class="subscribe-button"> Subscribe </div>
             <div class="search-bar">
                 <input type="text" placeholder="Add New Tool" class="search-text-field">
                 <img src="search-icon.png" id="search-icon">
+                <ul class="dropdown-tools-menu">
+                    <div class="tool-list-item">
+                        <img src="fb_icon.png"> Declan
+                        <div class="tool-user-count">1,044</div>
+                    </div>
+                    <div class="tool-list-item"><img src="fb_icon.png">Declan
+                        <div class="tool-user-count">1,044</div>
+                    </div>
+                    <div class="tool-list-item add-tool">
+                        Can't Find Your Tool?<br>+ Add it to the Chart
+                    </div>
+                </ul>
             </div>
             <div class="row your-tools-col">
                 <div class="your-tools-row">
